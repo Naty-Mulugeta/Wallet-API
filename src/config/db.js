@@ -3,7 +3,7 @@ import "dotenv/config"
 
 export const sql=neon(process.env.DATABASE_URL)
 
-async function initDB() {
+export async function initDB() {
     try {
         await sql`CREATE TABLE IF NOT EXISTS transactions (
             id SERIAL PRIMARY KEY,
